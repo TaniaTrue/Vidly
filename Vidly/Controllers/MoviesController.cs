@@ -9,11 +9,27 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
-        public ActionResult Random()
+        private ApplicationDbContext _context;
+
+        public MoviesController()
         {
-            var movie = new Movie();
-            return View();
+            _context = new ApplicationDbContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+        //public ActionResult Details(int id)
+        //{
+        //    //var movie = _context.Movies.Include(m=>m.Genre)
+
+        //    if (movie == null)
+        //        return HttpNotFound();
+
+        //    return View(movie);
+
+        //}
     }
 }
