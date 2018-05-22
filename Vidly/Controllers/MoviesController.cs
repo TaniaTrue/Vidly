@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -21,15 +22,14 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        //public ActionResult Details(int id)
-        //{
-        //    //var movie = _context.Movies.Include(m=>m.Genre)
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
 
-        //    if (movie == null)
-        //        return HttpNotFound();
+            if (movie == null)
+                return HttpNotFound();
 
-        //    return View(movie);
-
-        //}
+            return View(movie);
+        }
     }
 }
