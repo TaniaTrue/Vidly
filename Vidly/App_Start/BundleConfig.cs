@@ -9,13 +9,13 @@ namespace Vidly
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
-                        "~/Scripts/jquery-{version}.js",
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/bootbox.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/DataTables/jquery.dataTables.js",
-                       "~/Scripts/DataTables/dataTables.bootstrap.js"
-                      ));
+                                    "~/Scripts/jquery-{version}.js",
+                                    "~/Scripts/bootstrap.js",
+                                    "~/scripts/bootbox.js",
+                                    "~/Scripts/respond.js",
+                                    "~/scripts/datatables/jquery.datatables.js",
+                                    "~/scripts/datatables/dataTables.bootstrap.js"
+                                  ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -26,7 +26,7 @@ namespace Vidly
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-Lumen.css",
+                      "~/Content/bootstrap.css",
                        "~/Content/DataTables/css/dataTables.bootstrap.css", 
                       "~/Content/Site.css"));
 
