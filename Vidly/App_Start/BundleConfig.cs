@@ -28,7 +28,8 @@ namespace Vidly
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                       "~/Content/DataTables/css/dataTables.bootstrap.css", 
+                       "~/Content/DataTables/css/dataTables.bootstrap.css",
+                         "~/Content/Typeahead.css",
                       "~/Content/Site.css"));
 
         }
